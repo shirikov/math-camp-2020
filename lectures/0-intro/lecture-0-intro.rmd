@@ -1,0 +1,427 @@
+---
+title: "Welcome to Math Camp (2019)"
+subtitle: "Dept. of Political Science <br> University of Wisconsin--Madison"
+author: "Instructors:<br>Marcy Shieh and Anton Shirikov"
+date: "August 17, 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+#    mathjax: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: inverse, center, middle
+
+# Math and Political Science
+
+### (Political Science and Math)
+
+
+<!-- include setup -->
+
+
+
+
+
+---
+class: center, inverse, middle
+
+# Why math?
+
+
+
+
+
+
+---
+
+class: center
+
+# In general...
+
+--
+
+Math is explicit and specific
+
+--
+
+*Formalizing:* lay out premises and assumptions, derive implications
+
+--
+
+Discover hidden insights
+
+--
+
+Even if you don't do highly mathematical work, you will encounter it
+
+
+
+
+
+
+---
+
+class: center
+
+# For empirical research <br> (data analysis...)
+
+--
+
+Principled measurement methods
+
+--
+
+Formally describe patterns in observed data
+
+--
+
+Make judgments about *statistically meaningful* findings (vs. random noise)
+
+--
+
+Make causal inferences
+
+
+
+
+---
+
+class: center
+
+# For formal models <br> (game theory...)
+
+--
+
+Define sets of actors, preferences, incentives
+
+--
+
+Derive actors' strategies for optimal payoffs
+
+--
+
+Describe trade-offs of certain actions
+
+--
+
+Dealing with limited information, probabilistic beliefs, learning from new information
+
+
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Objectives
+
+
+
+
+
+---
+
+# Objectives
+
+Operationally...
+--
+
+- Preparation for methods courses
+- Practicing essential arithmetic routines
+
+--
+
+Conceptually...
+--
+
+- Show where political science needs math (using examples)
+- Intuitive, conceptual understanding is most important
+
+--
+
+You won't memorize everything we cover this week,
+
+but you need to be able to "roll with it" in class
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# Reassurances
+
+
+
+
+
+---
+
+# Reassurances
+
+
+Some material will be unfamiliar (and maybe scary) at first, *but*...
+
+--
+
+- Nobody expects you to be an expert by the end of math camp (that isn't the point)
+
+--
+
+- The point is intuition and application, not proofs or overly tricky examples
+
+--
+
+
+How do we know you will be fine?
+
+--
+
+- Different areas of research emphasize different areas of math (and specialization is the norm)
+
+--
+
+- You get out what you put in
+
+
+
+
+
+---
+
+class: center, middle
+
+# Questions so far?
+
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# Agenda
+
+
+
+
+
+
+---
+
+### Mornings (9–12ish): math lessons
+
+Lecture slides, definitions, examples
+
+--
+
+### Afternoons (1–3ish): practice
+
+Take-home exercises will be distributed
+
+Instructors will be present to work through problems
+
+--
+
+
+#### Contact your instructors at any time
+
+(But you should feel free to ask questions throughout)
+
+
+
+
+
+---
+
+
+#### Monday: Essential algebra and pre-calculus (Anton)
+
+- Fundamentals, notation, functions
+
+--
+
+#### Tuesday: Linear algebra (Micah)
+
+- Vectors and matrices
+- Useful for manipulating real data
+
+--
+
+#### Wednesday: Calculus (Micah)
+
+- Limits, derivatives, integrals
+- How variables affect other variables
+
+--
+
+#### Thursday: Finish calculus, Probability (Micah/Anton)
+
+- Mathematical intuitions of independent and conditional probability
+- Probabilistic processes (random variables), patterns in "real data"
+
+--
+
+#### Friday: Finish probability (Anton)
+
+
+
+
+---
+
+class: center, middle
+
+# Deliverables?
+
+Daily exercises (not collected)
+
+No final exam (or grades of any kind)
+
+You are in charge of yourselves
+
+### Questions?
+
+
+
+
+
+---
+
+# In the classroom
+
+--
+
+- Covering lots of ground
+
+--
+
+- Everyone has a different background
+
+--
+
+- Please ask questions
+
+--
+
+- Open and accepting environment
+
+--
+
+### Let us (Micah and me) know how we can make this work better
+
+--
+- Ask lots of questions! They help the entire class!
+
+- Slow us down
+
+- Ask *why* we are learning something
+
+
+
+
+---
+
+# Resources
+
+The [Github repository]( https://github.com/shirikov/math-camp-2020):
+
+- Slides, exercises
+- Source code to build it all
+
+Other resources:
+
+- View [last year's materials](https://github.com/shirikov/math-camp-2019)
+- Gill, [*Essential Mathematics for Political and Social Research*](https://www.amazon.com/Essential-Mathematics-Political-Research-Analytical/dp/052168403X)
+- Moore & Siegal: [*A Mathematics Course for Political & Social Research*](http://people.duke.edu/~das76/MooSieBook.html)
+
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# About your instructors
+
+
+
+
+---
+
+# Micah Dillard
+
+.pull-left[<img width = 100% src="img/micah.jpg">]
+
+.pull-right[
+A proud Ohio son (Columbus)
+
+Studies international relations & political methodology (since 2014)
+
+Domestic politics, economic sanctions, and foreign policy
+
+Methological focus: Formal theory (algebra and calculus)
+
+Email: [micah.dillard@wisc.edu](mailto:micah.dillard@wisc.edu)]
+
+
+
+---
+
+# Anton Shirikov
+
+.pull-left[<img width = 100% src="img/anton.jpg">]
+
+.pull-right[
+Originally from Russia. Switched back and forth between journalism and academia, but finally settled on the latter
+
+Studies comparative politics & political methodology (since 2015)
+
+Authoritarian politics, media, propaganda, legacies of communism
+
+Methodological focus: experiments
+
+Email: [shirikov@wisc.edu](mailto:shirikov@wisc.edu)]
+
+---
+class: center, middle, inverse
+
+# Acknowledgements
+
+We thank Sarah Bouchat, Michael DeCrescenzo, Micah Dillard, Brad Jones, and Dave Ohls for sharing previous Math Camps' materials.
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# Let's get started
+
+```{css, echo=FALSE}
+@media print {
+  .has-continuation {
+    display: block;
+  }
+}
+```
