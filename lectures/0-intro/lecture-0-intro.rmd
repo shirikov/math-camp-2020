@@ -15,6 +15,7 @@ output:
 ---
 
 ```{r xaringan-themer, include = FALSE}
+# setup
 library("here")
 source(here("R/setup-lectures.R"))
 ```

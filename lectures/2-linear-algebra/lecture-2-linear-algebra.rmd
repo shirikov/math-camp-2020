@@ -16,10 +16,12 @@ output:
 ---
 
 ```{r xaringan-themer, include = FALSE}
+# setup
 library("xaringanthemer")
 library("here")
 library("sysfonts")
 library("showtext")
+source(here("R/setup-lectures.R"))
 ```
 
 class: center, middle, inverse

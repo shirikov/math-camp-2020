@@ -17,6 +17,12 @@ class: center, middle
 
 # What is R?
 
+```{r xaringan-themer, include = FALSE}
+# setup
+library("here")
+source(here("R/setup-lectures.R"))
+```
+
 ---
 
 # R is...
