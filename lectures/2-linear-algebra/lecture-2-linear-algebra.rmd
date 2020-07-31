@@ -16,8 +16,10 @@ output:
 ---
 
 ```{r xaringan-themer, include = FALSE}
+library("xaringanthemer")
 library("here")
-source(here("R/setup-lectures.R"))
+library("sysfonts")
+library("showtext")
 ```
 
 class: center, middle, inverse
@@ -754,6 +756,8 @@ Matrix inversion is only possible with **some square matrices**. If a square mat
 
 ---
 
+
+
 ## Matrix Inversion (cont'd)
 
 A handy shortcut to find the inverse of a $2 \times 2$ matrix, calculate the **determinant** (product of the main diagonal minus the product of the off diagonal) and adjust the elements as such:
@@ -914,7 +918,7 @@ We know $\textbf{B}$ but we need to find $\textbf{A}^{-1}$ which given the inver
 3 & 4 
 \end{bmatrix}} =
 {\begin{bmatrix}
--\frac{2}{5} & \frac{3}{5}  \\
+-\frac{1}{5} & \frac{3}{5}  \\
 \frac{3}{10} & -\frac{1}{5} 
 \end{bmatrix}}
 \end{align}

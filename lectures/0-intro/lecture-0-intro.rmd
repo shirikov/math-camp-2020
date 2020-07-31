@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Math Camp (2019)"
+title: "Welcome to Math Camp (2020)"
 subtitle: "Dept. of Political Science <br> University of Wisconsin--Madison"
 author: "Instructors:<br>Marcy Shieh and Anton Shirikov"
 date: "August 17, 2020"
@@ -13,11 +13,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-
-```{r xaringan-themer, include = FALSE}
-library("here")
-source(here("R/setup-lectures.R"))
-```
 
 class: inverse, center, middle
 
@@ -259,36 +254,37 @@ Instructors will be present to work through problems
 ---
 
 
-#### Monday: Essential algebra and pre-calculus (Anton)
+#### Monday: Essential algebra and pre-calculus (Marcy)
 
 - Fundamentals, notation, functions
 
 --
 
-#### Tuesday: Linear algebra (Micah)
+#### Tuesday: Linear algebra, Intro to R (Marcy)
 
 - Vectors and matrices
 - Useful for manipulating real data
+- How to use basic commands in R
 
 --
 
-#### Wednesday: Calculus (Micah)
+#### Wednesday: Calculus (Anton)
 
 - Limits, derivatives, integrals
 - How variables affect other variables
 
 --
 
-#### Thursday: Finish calculus, Probability (Micah/Anton)
+#### Thursday: Finish calculus (Anton), Quiz
 
-- Mathematical intuitions of independent and conditional probability
-- Probabilistic processes (random variables), patterns in "real data"
+- Quiz for Adeline to get a sense of how comfortable you are with math
 
 --
 
-#### Friday: Finish probability (Anton)
+#### Friday: Probability (Anton), Methods Q&A
 
-
+- Mathematical intuitions of independent and conditional probability
+- Probabilistic processes (random variables), patterns in "real data"
 
 
 ---
@@ -331,7 +327,7 @@ You are in charge of yourselves
 
 --
 
-### Let us (Micah and me) know how we can make this work better
+### Let us (Anton and me) know how we can make this work better
 
 --
 - Ask lots of questions! They help the entire class!
@@ -373,20 +369,20 @@ class: center, middle, inverse
 
 ---
 
-# Micah Dillard
+# Marcy Shieh
 
-.pull-left[<img width = 100% src="img/micah.jpg">]
+.pull-left[<img width = 100% src="img/marcy.jpg">]
 
 .pull-right[
-A proud Ohio son (Columbus)
+Originally from California (SF Bay Area)
 
-Studies international relations & political methodology (since 2014)
+Studies American politics & political methodology (since 2017)
 
-Domestic politics, economic sanctions, and foreign policy
+Judicial politics, campaign rhetoric, institutions
 
-Methological focus: Formal theory (algebra and calculus)
+Methological focus: text analysis and experiments
 
-Email: [micah.dillard@wisc.edu](mailto:micah.dillard@wisc.edu)]
+Email: [mshieh2@wisc.edu](mailto:mshieh2@wisc.edu)]
 
 
 
