@@ -25,11 +25,15 @@ secondary <- "#0479a8"
 library("xaringan")
 library("xaringanthemer")
 
-duo_accent(primary_color = primary, 
+style_duo_accent(primary_color = primary, 
            secondary_color = secondary, 
-           header_font_google = google_font("Crimson Text"),
-           text_font_google = google_font("Source Sans Pro"),
+           header_font_google = google_font("Montserrat"),
+           text_font_google = google_font("Roboto"),
            code_font_google = google_font("Inconsolata"),
+           header_h1_font_size = "2.4rem",
+           header_h2_font_size = "1.9rem",
+           header_h3_font_size = "1.4rem",
+           code_font_size = "0.8rem",
            code_inline_background_color    = "#F5F5F5",
            table_row_even_background_color = "white",
            extra_css = 
