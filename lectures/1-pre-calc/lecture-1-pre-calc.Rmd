@@ -21,10 +21,13 @@ class: center, middle
 
 <!-- include setup -->
 
-```{r xaringan-themer, include = FALSE}
-library("here")
-source(here("R/setup-lectures.R"))
+```{r include = FALSE}
+library(tibble)
+library(dplyr)
+library(tidyverse)
+library(latex2exp)
 ```
+
 
 ---
 
@@ -190,6 +193,8 @@ If $a = 7x$, then $8*a$ and $8 * 7x$ are equivalent statements
 
 *Inequalities* show whether LHS or RHS is greater
 
+If $x + 3 > 2$, then the sum of $x + 3$ will be less than $2$
+
 - Usually we use them to find the *conditions under which a statement holds*
 
 
@@ -215,7 +220,7 @@ $$-7x + 3 > 12$$
 
 --
 
-Remember to flip an inequality if you multiply by a negative number!
+Remember to flip an inequality if you multiply or divide by a negative number!
 
 
 
@@ -1503,6 +1508,8 @@ ggplot(ll, aes(x = p, y = logpr)) +
        y = TeX("Log Pr(y = 4)"))
 
 ```
+
+(potentially) helpful video for understanding MLE [here](https://www.youtube.com/watch?v=XepXtl9YKwc)
 
 ]
 
