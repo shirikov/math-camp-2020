@@ -14,14 +14,16 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r xaringan-themer, include = FALSE}
+library("here")
+source(here("R/setup-lectures.R"))
+```
+
 class: inverse, center, middle
 
 # Math and Political Science
 
 ### (Political Science and Math)
-
-
-<!-- include setup -->
 
 
 
