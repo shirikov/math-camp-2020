@@ -26,6 +26,7 @@ library(tibble)
 library(dplyr)
 library(tidyverse)
 library(latex2exp)
+source(here("R/setup-lectures.R"))
 ```
 
 

@@ -27,7 +27,7 @@ library("xaringanthemer")
 
 style_duo_accent(primary_color = primary, 
            secondary_color = secondary, 
-           header_font_google = google_font("Montserrat"),
+           header_font_google = google_font("Cabin"),
            text_font_google = google_font("Roboto"),
            code_font_google = google_font("Inconsolata"),
            header_h1_font_size = "2.4rem",
