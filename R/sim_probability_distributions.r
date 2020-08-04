@@ -1,3 +1,5 @@
+# script to simulate probability distributions in the example
+# in the lecture on probability
 library(ggplot2)
 library(patchwork)
 library(tidyverse)
@@ -51,8 +53,12 @@ binom_plot <- ggplot(binom_d, aes(outcome)) +
         axis.ticks.y = element_blank(),
         plot.title = element_text(hjust = 0.5))
 
+# show plots together
 (cont_dist[[1]] | cont_dist[[2]] | cont_dist[[3]]) / 
   (cont_dist[[4]] | binom_plot | bern_plot) + plot_annotation(
     caption = 'Based on simulated data'
   )
+
+# save the resulting figure 
+# (needs to be manually moved to lectures\4-probability\img)
 ggsave("dist.png")
