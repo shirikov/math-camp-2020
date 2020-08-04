@@ -321,7 +321,7 @@ As $x$ approaches $0$, the function retains some positive value in the numerator
 
 class: center, middle
 
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(-10,10, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -509,7 +509,7 @@ Let's consider a few examples.
 ---
 
 class: center, middle
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -523,7 +523,7 @@ geom_vline(xintercept = 0, colour = "black") +ylim(0,0.35)
 ```
 ---
 class: center, middle
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -537,7 +537,7 @@ geom_vline(xintercept = 0, colour = "black") +ylim(0,0.35)
 ```
 ---
 class: center, middle
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -552,7 +552,7 @@ geom_vline(xintercept = 0, colour = "black") +ylim(0,0.35)
 ---
 
 class: center, middle
-```{r, echo=FALSE,  warning=FALSE, cache = TRUE}
+```{r, echo=FALSE,  warning=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -566,7 +566,7 @@ geom_vline(xintercept = 0, colour = "black") +ylim(0,0.35)
 ```
 ---
 class: center, middle
-```{r, echo=FALSE, warning=FALSE, cache=TRUE}
+```{r, echo=FALSE, warning=FALSE, cache=TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -931,7 +931,9 @@ This is **the product rule**.
 
 ## Derivative of a Product
 
-As an example consider $f(x) =x^2 +1$ and $g(x) = x^3-4x$.  What is $(f(x) \times g(x))'$?
+As an example consider $f(x) =x^2 +1$ and $g(x) = x^3-4x$.  
+
+What is $(f(x) \times g(x))'$?
 
 --
 
@@ -1179,25 +1181,23 @@ Sometimes when we calculate limits, it helps to take the derivative first.
 
 --
 
-Consider the limit: $\lim_{x \to 2} \frac{x^2 + x - 6}{x^2 - 4}$.
+Consider the limit: $\lim_{x \to 2} \frac{x^2 + x - 6}{x^2 - 4}$
 
 $\frac{2^2 + 2 - 6}{2^2 - 4} = \frac{0}{0}$
 
-If both the numerator and the denominator are $0$, $\infty$, $-\infty$, we cannot evaluate the limit.
+If both the numerator and the denominator are $0$, $\infty$, or $-\infty$, we cannot evaluate the limit.
 
 --
 
-However, **L'Hôpital's Rule** says:
-
-$\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}$.
+However, **L'Hôpital's Rule** says: $\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}$
 
 Then, 
 
 \begin{align}
 \lim_{x \to 2} \frac{x^2 + x - 6}{x^2 - 4} 
 &= \lim_{x \to 2} \frac{(x^2 + x - 6)'}{(x^2 - 4)'} \\
-&= \lim_{x \to 2} \frac{2x + 1}{2x}
-& = 1.25
+&= \lim_{x \to 2} \frac{2x + 1}{2x} \\
+&= 1.25
 \end{align}
 
 

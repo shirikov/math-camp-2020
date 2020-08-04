@@ -1131,7 +1131,7 @@ First field: "I want to study *how to study* politics" (develop new statistical 
 
 Second field: "I want to teach and research about/use advanced methods." Most grad students in the department who take advanced methods training take this path
 
-Minor: 3 courses (see reqs/talk to Deb)
+Minor: 3 courses. Depends on your dissertation focus. See reqs, talk to your advisors and to Deb
 
 
 ---
@@ -1155,7 +1155,12 @@ Do replication projects (in MLE and beyond)
 
 Invest in math skills in the beginning (math department has intro to calculus and other classes; self-learning also works)
 
-If you aim for advanced knowledge of methods, classes are necessary but not sufficient. Books and online resources help, as well as recent empirical work with applications of new methods
+If you aim for advanced knowledge of methods, classes are necessary but not sufficient:
+
+- Google is your best friend
+- Use [Cross Validated](https://stats.stackexchange.com/) for questions on stats and [Stack Overflow](https://stackoverflow.com/questions) for learning R
+- Books and online courses help
+- Carefully read empirical work with applications of new methods
 
 Take the open science and the "replication crisis" seriously
 

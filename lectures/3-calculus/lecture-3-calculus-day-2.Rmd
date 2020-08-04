@@ -20,7 +20,6 @@ source(here("R/setup-lectures.R"))
 ```
 
 
----
 ## Agenda
 
 1) Second Derivatives
@@ -243,7 +242,7 @@ geom_hline(yintercept = 0, colour = "black")+
 geom_vline(xintercept = 0, colour = "black") +
 geom_segment(x = 0.25, xend = 0.25, y = 0, yend = 3, colour = "red", linetype = "dotdash") +
 geom_segment(x = 0.75, xend = 0.75, y = 0, yend = 3, colour = "red", linetype = "dotdash")+
-ylim(0,5)
+ylim(0,4)
 ```
 ]
 
@@ -350,7 +349,7 @@ This would require a more complex trick.
 ---
 ## Integral as the Limit of a Sum
 
-  Imagine dividing the region into intervals and drawing a rectangle to capture the area for each interval, with height equal to the value of the function at the left (or right) of the interval, then summing the area of those rectangles.
+Imagine dividing the region into intervals and drawing a rectangle to capture the area for each interval, with height equal to the value of the function at the left (or right) of the interval, then summing the area of those rectangles.
   
 --
 
@@ -359,7 +358,7 @@ Let's see what happens as we add rectangles
 ---
 class: center,  middle
 
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -375,7 +374,7 @@ geom_segment(x = 0.25, xend = 0.75, y = .25 -(.25)^2, yend = .75 -(.75)^2, colou
 
 class: center, middle
 
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -396,7 +395,7 @@ geom_segment(x = 0.5, xend = 0.75, y = .5 -(.5)^2, yend = .5 -(.5)^2, colour = "
 
 class: center, middle
 
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0, 1, by= 1))
 
 ggplot(df, aes(x)) + 
@@ -740,23 +739,20 @@ We can simply solve this equation:
 
 --
 
-We have two strategies from Lesson 1 to solve this equation: *factoring* or using the *quadratic formula*. Both strategies will yield the same results!
+We can solve this equation either by *factoring*
 
---
+$0 = (x^2 - 4x) + (-7x + 28) = x(x - 4) - 7(x - 4) = (x - 4) (x - 7)$
 
-We'll use the quadratic formula, which yields
+...or by using the *quadratic formula*
 
---
 
-\begin{align}
-x &= \frac{11 \pm \sqrt{(-11)^2-4(1)(28)}}{2(1)} \\
-x &= \frac{11 \pm 3}{2} \\
-x &= 4 \text{ or } 7
-\end{align}
+$x = \frac{11 \pm \sqrt{(-11)^2-4(1)(28)}}{2(1)} = \frac{11 \pm 3}{2}$
+
+Either way, $x = 4$ or $x = 7$
 
 ---
 class: center, middle
-```{r, echo=FALSE, cache = TRUE}
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
 df <- data.frame(x = seq(0,10, by= 1))
 
 ggplot(df, aes(x)) + 
