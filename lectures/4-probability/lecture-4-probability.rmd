@@ -115,7 +115,7 @@ A **random variable** is a realization of a process that is at least partially r
 
 --
 
-A random variable could have many different **potential outcomes** (e.g., heads or tails, democratic survival or failure)
+A random variable could have a number of different **potential outcomes** (e.g., heads or tails, democratic survival or failure, the number of deaths in a conflict)
 
 --
 
@@ -144,7 +144,7 @@ Probability distributions can describe discrete outcomes (regime survival or fai
 
 Probability distributions always sum to 1
 
-- "The law of total probability"
+- "The law of total probability" (allows to calculate probabilities of certain events based on probabilities of other events)
 - Discrete distributions: sum the probabilities of all potential outcomes
 - Continuous distributions: integrate over the continuous space of outcomes
 
@@ -240,7 +240,7 @@ $$\begin{align}
 
 --
 
-For example: number of possible ways to deal a card game, winning lottery numbers
+For example: the number of possible ways to deal a card game, winning lottery numbers
 
 
 
@@ -344,7 +344,7 @@ Sometimes called the *universal set*
 
 --
 
-Not the same as the set that contains *everything*. Only the relevant things for what we're currently talking about.
+Not the same as the set that contains *everything*. Only the relevant things for what we're currently talking about (e.g., a country's population is the universal set for any survey sample)
 
 
 ---
@@ -690,7 +690,7 @@ Many questions we ask in political science are about conditional probabilities. 
 
 ---
 
-## What's the Probability?
+## Exercises: What's the Probability?
 
 
 <center>
@@ -705,7 +705,7 @@ $p(A \mid H^{C})$
 
 ---
 
-## What's the Probability?
+## Exercises: What's the Probability?
 
 We have a sample of democratic regimes and we know which of them have broken down (numbers are completely invented):
 
@@ -1008,9 +1008,11 @@ This is **inverse conditional probability**: how we find $p(A \mid \mathrm{blue}
 
 --
 
-This is also a formulation of **Bayes' Theorem**, which more generally is stated as:
+This is also an example of a formulation of **Bayes' Theorem**, which more generally is stated as:
 
-$p(x \mid y) = \frac{p(y \mid x)p(x)}{p(y)}$
+$$\begin{align}
+p(x \mid y) = \frac{p(y \mid x)p(x)}{p(y)}
+\end{align}$$
 
 ---
 
@@ -1030,9 +1032,9 @@ $$\begin{align}
 \end{align}$$
 
 Bayes' Theorem has many applications: 
-- calculating risks of [food allergies](https://www.countbayesie.com/blog/2016/1/22/why-you-should-believe-your-friends-claims-about-food-allergies) or [having a rare disease](http://carrot.mcb.uconn.edu/~olgazh/bayes_th_problem.html)
+- calculating risks of [food allergies](https://www.countbayesie.com/blog/2016/1/22/why-you-should-believe-your-friends-claims-about-food-allergies) or [rare diseases](http://carrot.mcb.uconn.edu/~olgazh/bayes_th_problem.html)
 - [finding the sources of mechanical errors](https://en.wikipedia.org/wiki/Bayes%27_theorem#A_more_complicated_example)
-- machine learning and prediction---e.g., [how likely is a candidate to win an election](https://blogs.cornell.edu/info2040/2015/11/15/bayes-rule-in-the-presidential-election/)
+- machine learning and prediction; e.g., [how likely is a candidate to win an election](https://blogs.cornell.edu/info2040/2015/11/15/bayes-rule-in-the-presidential-election/)
 - formal modeling (how actors derive their optimal responses)
 
 It is also the basis for Bayesian inference and Bayesian statistics
@@ -1147,6 +1149,8 @@ Pick something you like and get good at it
 - Time series, Bayes, formal models, text as data, causal inference, experiments
 
 Do replication projects (in MLE and beyond)
+
+- [Dataverse](https://dataverse.harvard.edu/) is a great resource where scholars post data and code for their papers
 
 
 ---

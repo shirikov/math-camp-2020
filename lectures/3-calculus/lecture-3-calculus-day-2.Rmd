@@ -163,10 +163,10 @@ $g(p,q) = 8p^2q+4pq−7pq^2 +18$
 
 It is possible to combine second-order (and higher) derivatives with partial derivatives. For example:
 
-Consider $f(x, y) = 3x^3y^2$ and let's we wanted to find $\frac{\partial^2}{\partial x \partial y}f(x,y)$:
+Consider $f(x, y) = 3x^3y^2$. Let's say we want to find $\frac{\partial^2}{\partial y \partial x}f(x,y)$:
 
 \begin{align}
-\frac{\partial^2}{\partial x \partial y}(3x^3y^2) &=\frac{\partial}{\partial y}((3)3x^{3-1}y^2) \\
+\frac{\partial^2}{\partial y \partial x}(3x^3y^2) &=\frac{\partial}{\partial y}((3)3x^{3-1}y^2) \\
 &=\frac{\partial}{\partial y}(9x^2y^2) \\
 &=(2)9x^2y^{2-1} \\
 &=18x^2y
@@ -174,9 +174,9 @@ Consider $f(x, y) = 3x^3y^2$ and let's we wanted to find $\frac{\partial^2}{\par
 
 --
 
-Pay attention to the denominator to give you guidance about what operations to perform. Here, we are taking the second derivative of the entire function, but are differentiating once with respect to $x$ and once with respect to $y$ overall. 
+Pay attention to the denominator to learn what operations to perform, and in what order. Here, we are taking the second derivative of the entire function, but are differentiating once with respect to $x$ and then once with respect to $y$.
 
-If instead we were given $\frac{\partial^3}{\partial x^2 \partial y}$ we would differentiate 3 times overall, twice with respect to x and once with respect to y.
+If instead we were given $\frac{\partial^3}{\partial x^2 \partial y}$ we would differentiate 3 times overall, once with respect to y, and then twice with respect to x.
 
 ---
 
@@ -203,7 +203,7 @@ Integral is either the total area as the function extends to infinity in either 
 
 --
 
-One common application of integrals in social science is to calculate the probability that a variable falls in a certain range (e.g., that a conflict will leave more than a 1,000 people dead) or takes a certain value (a politician is re-elected, an authoritarian regime breaks down).
+One common application of integrals in social science is to calculate the probability that a variable falls in a certain range (e.g., that a conflict will leave more than a 1,000 people dead)
 
 ---
 
@@ -627,10 +627,10 @@ In social science and in statistics, we often want to find the maximum or minimu
 
 --
 
--  We have specified a function that shows the utility a president gets out of some policy in terms of their chances of reelection. Policy is an input, probability of reelection is an output. 
-  + We want to see when this function is maximized---that is, what values of policy would give the maximum chance of reelection.
--  Or we have a function that determines the bias in our statistical estimates of said probability of reelection. Model parameters are inputs, bias (how much the estimate deviates from the truth) is an output. 
-  + We want to minimize this function---that is, find model parameters under which the bias is smallest.
+-  We have specified a function that shows the utility a president gets out of some policy in terms of their chances of reelection. Policy is the input, probability of reelection is the output. 
+  + We want to see when this function is maximized, or in other words, what values of policy would give the maximum chance of reelection.
+-  Or we have a function that determines the bias in our statistical estimates of said probability of reelection. Model parameters are inputs, bias (how much the estimate deviates from the truth) is the output. 
+  + We want to minimize this function, that is, find model parameters under which the bias is smallest.
 
 --
 
@@ -739,7 +739,7 @@ We can simply solve this equation:
 
 --
 
-We can solve this equation either by *factoring*
+We can solve it either by *factoring*
 
 $0 = (x^2 - 4x) + (-7x + 28) = x(x - 4) - 7(x - 4) = (x - 4) (x - 7)$
 

@@ -20,8 +20,6 @@ source(here("R/setup-lectures.R"))
 ```
 
 
----
-
 ## Overview
 
 Calculus evaluates the behavior of functions:
@@ -34,19 +32,15 @@ Calculus evaluates the behavior of functions:
 
 Concepts from calculus underlie a wide variety of mathematics, particularly in the applied math that we use in political science
 
----
-
-## Calculus in Political Science
-
-Finding the fitline with the minimal distance between predicted and observed data.
-
 --
 
-Calculating the probability density in regions of continuous distributions.
+Calculus in political science:
 
---
+- Finding the fitline with the minimal distance between predicted and observed data
 
-Solving for the choice that maximizes a decision maker's utility.
+- Calculating the probability density in regions of continuous distributions
+
+- Solving for the choice that maximizes a decision maker's utility
 
 
 ---
@@ -65,8 +59,6 @@ Day 2
 ---
 
 ## Limits
-
---
 
 The first important idea for calculus are limits. 
 
@@ -161,13 +153,13 @@ geom_segment(x = 0, xend = 50, y =3, yend = 3, linetype = "dotdash")
 .pull-right[
 Let's consider a less simple function, $g(x) = y = 3-\frac{1}{x}$, plotted to the left. What is the limit of $g(x)$ as $x$ *approaches* $\infty$?
 
-As $x$ approaches $\infty$, $g(x)$ approaches 3. Why?
+As $x$ approaches $\infty$, $g(x)$ approaches 3. How do we know?
 
 ]
 
 ---
 
-## Limits: Example 2s
+## Limits: Example 2
 
 .pull-left[
 ```{r, echo=FALSE, cache = TRUE}
@@ -194,23 +186,21 @@ As $x$ gets larger, $\frac{1}{x}$ gets smaller and smaller. $$\left(\frac{1}{2} 
 ---
 ## Limits, Formally Written
 
---
-
 Formally, limits are expressed as:
-
---
 
 \begin{align}
 \lim_{x \to c} f(x) = L
 \end{align}
 
---
-
 This expression should be read as: ''As $x$ approaches $c$, the limit of $f(x)$ is $L$.''
 
 --
 
-Many times, you will see this expression written as $\lim\limits_{x \to c^{-}} f(x) = L$ or $\displaystyle\lim_{x \to c^{+}} f(x) = L$. 
+Many times, you will see this expression written as 
+
+$\lim\limits_{x \to c^{-}} f(x) = L$ 
+
+or $\displaystyle\lim_{x \to c^{+}} f(x) = L$ 
 
 A negative sign $(-)$ implies "As $x$ approaches $c$ *from the left*" 
 
@@ -233,7 +223,7 @@ Separate out the limits into distinct elements. Move constants outside the limit
 
 Watch out for components that $\dots$
   - $\dots$ grow very large or very small
-  - $\dots$ become zero?
+  - $\dots$ become zero
 
 --
 
@@ -251,8 +241,6 @@ For functions that are well-behaved, the limit as $x$ approaches a finite point 
 
 
 ## Finding Limits: Example 1
-
---
 
 Let's consider $\displaystyle\lim_{x \to 2} x^2-3x +1$
 
@@ -302,8 +290,6 @@ Let's consider $\displaystyle\lim_{x \to 0} \frac{4x^4+7x^2 +8}{3x^4}$
 ---
 
 ## Finding Limits: Example 3
-
---
 
 The limit is $\infty$.
 
@@ -490,7 +476,7 @@ geom_vline(xintercept = 0, colour = "black") +ylim(0,0.35)
 ]
 
 .pull-right[
-Let's consider even more complicated function, $y = x-x^2$, plotted to the left. What is its ''slope'', or $\frac{\Delta f(x)}{\Delta x}$?
+Let's consider an even more complicated function, $y = x-x^2$, plotted to the left. What is its ''slope'', or $\frac{\Delta f(x)}{\Delta x}$?
 
 How do we even calculate this?
 ]
@@ -506,6 +492,20 @@ We can approximate the slope at a certain location by picking a point nearby on 
 
 Let's consider a few examples.
 
+---
+
+class: center, middle
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
+df <- data.frame(x = seq(0, 1, by= 1))
+
+ggplot(df, aes(x)) + 
+stat_function(fun = function(x) x-x^2, colour = "red")+
+geom_point(x=0.3, y = .21)+
+theme_minimal()+
+xlab("x") + ylab("y") +
+geom_hline(yintercept = 0, colour = "black")+
+geom_vline(xintercept = 0, colour = "black") +ylim(0,0.35)
+```
 ---
 
 class: center, middle
@@ -599,7 +599,9 @@ So, as you reduce the interval size to $0$, this line converges in the limit to 
 
 When the interval is wide, it is not a good approximation. But as the interval shrinks, the appoximation becomes better.
 
-So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
+So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. 
+
+Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
 
 
 
@@ -616,7 +618,9 @@ So, as you reduce the interval size to $0$, this line converges in the limit to 
 
 When the interval is wide, it is not a good approximation. But as the interval shrinks, the appoximation becomes better.
 
-So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
+So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. 
+
+Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
 
 
 
@@ -635,7 +639,9 @@ So, as you reduce the interval size to $0$, this line converges in the limit to 
 
 When the interval is wide, it is not a good approximation. But as the interval shrinks, the appoximation becomes better.
 
-So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
+So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. 
+
+Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
 
 
 
@@ -789,11 +795,7 @@ If $f(x) = cx^n$, then its derivative is $f'(x) = ncx^{n-1}$.
 
 --
 
-The simplest example: consider the line, $f(x) = 3x$. What's its derivative? 
-
---
-
-It is $3$ but why?
+The simplest example: consider the line $f(x) = 3x$. What's its derivative? 
 
 --
 
@@ -1107,9 +1109,11 @@ f'(x) = (log_{10}(x))' = \frac{1}{ln(10)x}
 
 --
 
-Let $g(x) = ln(3x^2+4)$. What is $g'(x)$? (using the Chain Rule):
+Let $g(x) = ln(3x^2+4)$. What is $g'(x)$? 
 
 --
+
+(using the chain rule):
 
 \begin{align}
 g'(x) = (ln(3x^2+4))' &= \frac{1}{3x^2+4}\times(3x^2+4)' \\
