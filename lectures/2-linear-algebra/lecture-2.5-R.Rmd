@@ -42,6 +42,8 @@ source(here("R/setup-lectures.R"))
 - R graphics are often featured in research in the top political science journals
 - If you know R, you will be able to create cool graphics too!
 - Check out Kastellec and Leoni's 2007 *Perspectives on Politics* article, [Using Graphs Instead of Tables in Political Science](https://scholar.princeton.edu/sites/default/files/jkastellec/files/graphs.pdf)
+- 
+
 
 ---
 
@@ -103,7 +105,7 @@ What does it mean to create an object in R?
   
 --
 
-You are basically puttung stuff in a box, then labeling the box.
+You are basically putting stuff in a box, then labeling the box.
 
 --
 
@@ -291,6 +293,7 @@ class: middle, center
 # Create graph in ggplot2
 
 - Create graph
+
 `streaming_graph<-ggplot(data=streaming_dataframe_v2, aes(x=streaming, y=approve)) + geom_bar(stat="identity")`
 
 - Load graph
@@ -315,6 +318,7 @@ class: middle, center
 - Don't be discouraged
 - Don't be afraid to ask for help
 - Rely on Google! Use it like it's a friend!
+- [swirl](https://swirlstats.com/) is a good resource for learning R
 
 ---
 
