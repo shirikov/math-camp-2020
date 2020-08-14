@@ -51,8 +51,8 @@ source(here("R/setup-lectures.R"))
 
 --
   
-- Download R (engine)
-- Download RStudio (car)
+- Download [R](https://cran.r-project.org/mirrors.html) (engine): pick the CRAN mirror closest to you!
+- Download [RStudio](https://rstudio.com/products/rstudio/download/) (car): download the free version!
 - Open RStudio
 - Create New Folder called `sample-folder`
 - Go to File -> New File -> R Script
@@ -307,6 +307,23 @@ class: middle, center
 - Load graph with color
 
 `streaming_graph_blue`
+
+---
+
+# Knit a practice R Markdown file!
+
+--
+  
+1. Download [LaTeX](https://www.latex-project.org/get/).
+2. Go to RStudio.
+3. Go to File > R Markdown
+4. The "New to R Markdown" window will come up.
+5. Enter a title for your file (e.g., Practice R Markdown Document).
+6. Select PDF as the output format.
+7. Save As "practice.Rmd".
+8. Click "Knit".
+9. Compare the PDF to the Rmd file.
+10. Check out the [R Markdown Cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
 
 ---
 
