@@ -892,7 +892,7 @@ class: middle, center
 
 $p(x) = 2x - 1$, on the interval $[-2, 2]$
 
-```{r fun_practice_1, fig.width = 5, fig.height = 5}
+```{r fun_practice_1, out.width = "70%"}
 
 px <- data_frame(x = seq(-2, 2, .01),
                  px = (2 * x) - 1)
@@ -914,7 +914,7 @@ class: middle, center
 
 $q(x) = x * -1^{x}$, for integers $\{0, 1, 2, 3, 4, 5\}$
 
-```{r fun_practice_2, fig.width = 5, fig.height = 5}
+```{r fun_practice_2, out.width = "70%"}
 
 qx <- data_frame(x = 0:5,
                  qx = x * ((-1)^(x)))
@@ -935,7 +935,7 @@ class: center, middle
 
 $r(x) = 2x^{2} - 3x + 4$, on the interval $(0, 4)$
 
-```{r fun_practice_3, fig.width = 5, fig.height = 5}
+```{r fun_practice_3, out.width = "70%"}
 
 rx <- data_frame(x = seq(0, 4, .01),
                  rx = (2 * (x^2)) + (3 * x) + 4)
