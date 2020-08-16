@@ -815,7 +815,7 @@ A *piecewise-defined function* has different definitions for different regions o
 .pull-left[
 $$f(x)=\left\{\begin{array}{ll} 0 & \text{if } x < 0 \\ x & \text{if } x \in [0, 1] \\ x^{2} & \text{if } x > 1 \end{array}\right.$$
 
-```{r piecewise_1, fig.width = 3, fig.height = 3}
+```{r piecewise_1, out.width = "70%"}
 
 pw1 <-
   data_frame(x = seq(-3, 3, .01)) %>%
@@ -837,7 +837,7 @@ ggplot(pw1, aes(x = x, y = y)) +
 .pull-left[
 $$g(x)=\left\{\begin{array}{ll} x+3 & \text{if } x \in (-\infty,0)\\ 4   & \text{if } x = 0  \\ x-3 & \text{if } x \in (0,\infty) \end{array}\right.$$
 
-```{r piecewise_2, fig.width = 3, fig.height = 3}
+```{r piecewise_2, out.width = "70%"}
 
 pw2 <-
   data_frame(x = seq(-3, 3, .01),
@@ -971,7 +971,7 @@ A *limit* describes a function's behavior at a given input: $\displaystyle\lim_{
 ...or as the input value changes: $\displaystyle\lim_{x \to \infty}\left( 2 - x^{2} \right) = -\infty$
 
 
-```{r limit_example, fig.height = 3, fig.width = 4}
+```{r limit_example, out.width = "40%"}
 
 limex <- data_frame(x = seq(-2, 2, .01),
                     y = 2 - (x^2))
@@ -1161,7 +1161,7 @@ Imagine you draw a line between two points along a function. A function (or segm
 
 - convex: $\frac{f(x_{1}) + f(x_{2})}{2} > f\left( \frac{x_{1} + x_{2}}{2} \right)$
 
-```{r concavity, fig.width = 6, fig.height = 3}
+```{r concavity, out.width = "70%", fig.width = 6, fig.height = 3}
 
 cc <- data_frame(x = seq(0, 4, .01),
                  concave = log(x) - x,
@@ -1192,7 +1192,7 @@ Formally: if $y = f(x)$, then $f^{-1}(y) = x$
 
 Also: $f^{-1}\left( f(x) \right) = x$
 
-```{r inverse, fig.width = 6, fig.height = 3}
+```{r inverse, out.width = "70%", fig.width = 6, fig.height = 3}
 
 invert <- data_frame(x = seq(-3, 3, .01),
                      Invertible = exp(x),
@@ -1307,7 +1307,7 @@ Important properties for exponents and roots
 
 class: center, middle
 
-## Two important continuous, monotonic, invertible functions: <br> Exponentials and Logarithms
+### Two important continuous, monotonic, invertible functions: <br> Exponentials and Logarithms
 
 
 
@@ -1334,7 +1334,7 @@ Exponentials and logarithms are inverse functions. Logs "undo" exponentials, and
 
 We can see this because exponentials and logs are *reflections of each other* over $y = x$ (one way to identify inverse functions)
 
-```{r explog, fig.width = 4, fig.height = 4}
+```{r explog, out.width = "55%"}
 
 logexp <- data_frame(x = seq(-5, 5, .01),
                      `e^x` = exp(x),
@@ -1384,7 +1384,7 @@ $$f(x) = e^{-x^{2}}$$
 
 --
 
-```{r exponentiated_parabola, fig.height = 4, fig.width = 6}
+```{r exponentiated_parabola, out.width = "50%"}
 
 data_frame(x = seq(-3, 3, .01),
            par = x^2,
@@ -1431,7 +1431,7 @@ class: center, middle
 $$\displaystyle f(x \mid \mu, \sigma) = \frac{1}{2\pi\sigma^{2}}e^{- \frac{(x - \mu)^{2}}{2\sigma^{2}}}$$
 
 
-```{r normal_pdf, fig.width = 5, fig.height = 4}
+```{r normal_pdf, out.width = "60%"}
 
 data_frame(x = seq(-5, 5, 0.01),
            pdf = dnorm(x)) %>%
@@ -1659,7 +1659,7 @@ The absolute value operator returns the positive representation of a number
 $$|x| = \left\{ \begin{array}{ll} x & \text{if } x \text{ is positive} \\ -x & \text{if } x  \text{ is negative} \end{array} \right.$$
 
 
-```{r abs, fig.width = 5, fig.height = 3}
+```{r abs, out.width = "50%"}
 
 data_frame(x = -3:3,
            y = abs(x)) %>%
