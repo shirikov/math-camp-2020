@@ -177,7 +177,7 @@ geom_segment(x = 0, xend = 50, y =3, yend = 3, linetype = "dotdash")
 .pull-right[
 Let's consider a less simple function, $g(x) = y = 3-\frac{1}{x}$, plotted to the left. What is the limit of $g(x)$ as $x$ *approaches* $\infty$?
 
-As $x$ approaches $\infty$, $g(x)$ approaches 3. Why?
+As $x$ approaches $\infty$, $g(x)$ approaches 3. How do we know?
 
 As $x$ gets larger, $\frac{1}{x}$ gets smaller and smaller. $$\left(\frac{1}{2} > \frac{1}{20} > \frac{1}{200} \dots\right)$$
 
@@ -585,7 +585,9 @@ When the interval is wide, it is not a good approximation. But as the interval s
 
 --
 
-So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
+So, as you reduce the interval size to $0$, this line converges in the limit to the line that lies tangent to the curve at that point. 
+
+Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dots$
 
 --
 
@@ -696,7 +698,7 @@ Recall that $f(x) = x − x^2$ and consider a very small interval $\epsilon \dot
 \end{align}
 
 ---
-## Derivative as Limits
+## Derivatives as Limits
 
 .pull-left[
 ```{r, echo=FALSE, warning=FALSE, cache=TRUE}
@@ -913,7 +915,7 @@ h'(1) &= 7
 
 ## Derivative of a Product
 
-The derivative of a product two functions (let's say $f(x)$ and $g(x)$) is:
+The derivative of a product of two functions (let's say $f(x)$ and $g(x)$) is:
 
 --
 
@@ -1018,6 +1020,7 @@ The derivative of one function nested inside another is:
 --
 
 or the derivative of the outside with respect to the inside *times* the derivative of the inside function.
+
 --
 
 This is referred to as **the chain rule**.
