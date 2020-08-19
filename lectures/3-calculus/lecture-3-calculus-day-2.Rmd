@@ -62,6 +62,34 @@ Higher order (third, fourth, etc.) derivatives also exist, but are rarely releva
 
 ---
 
+## First and Second Derivatives Visually
+
+```{r, echo=FALSE, cache = TRUE, out.width = "70%"}
+df <- data.frame(x = seq(-100, 100, by= 0.5))
+
+ggplot(df, aes(x)) + 
+stat_function(fun = function(x) 5*x^3 +8*x^2 +2*x+4, colour = "black", size = 1.4) + 
+stat_function(fun = function(x) 15*x^2 +16*x +2, colour = "blue", 
+              linetype = "dotted",
+              size = 1.4) + 
+stat_function(fun = function(x) 30*x +16, colour = "red", 
+              linetype = "dotted", size = 1.4) + 
+  theme_minimal()+
+xlab("x") + ylab("y") +
+geom_hline(yintercept = 0, colour = "gray")+
+geom_vline(xintercept = 0, colour = "gray")+
+xlim(-10,10) +
+  ylim(-500,500) +
+  geom_text(aes(-0.5, -480, label = (paste(expression("f(x) = 5x"^3+"8x"^2+"2x"+4)))),
+            parse = TRUE, size = 6) +
+  geom_text(aes(-6, 500, label = (paste(expression("f'(x) = 15x"^2+"16x"+2)))),
+            parse = TRUE, color = "blue", size = 6) +
+  geom_text(aes(-8, -315, label = (paste(expression("f''(x) = 30x"+16)))),
+            parse = TRUE, color = "red", size = 6)
+```
+
+---
+
 ## Concavity and Convexity
 
 .pull-left[
@@ -69,11 +97,12 @@ Higher order (third, fourth, etc.) derivatives also exist, but are rarely releva
 df <- data.frame(x = seq(-2, 1, by= 0.5))
 
 ggplot(df, aes(x)) + 
-stat_function(fun = function(x) 5*x^3 +8*x^2 +2*x+4, colour = "black")+ theme_minimal()+
+stat_function(fun = function(x) 5*x^3 +8*x^2 +2*x+4, colour = "black",
+              size = 1.4)+ theme_minimal()+
 xlab("x") + ylab("y") +
 geom_hline(yintercept = 0, colour = "black")+
 geom_vline(xintercept = 0, colour = "black")+
-ylim(0,20)
+ylim(-10,20)
 ```
 ]
 
@@ -94,11 +123,13 @@ When is it convex? When is it concave?
 df <- data.frame(x = seq(-2, 1, by= 0.5))
 
 ggplot(df, aes(x)) + 
-stat_function(fun = function(x) 5*x^3 +8*x^2 +2*x+4, colour = "black")+ theme_minimal()+
+stat_function(fun = function(x) 5*x^3 +8*x^2 +2*x+4, colour = "black",
+              size = 1.4)+ stat_function(fun = function(x) 30*x +16, colour = "red", linetype = "dotted",
+              size = 1.4) + theme_minimal()+
 xlab("x") + ylab("y") +
 geom_hline(yintercept = 0, colour = "black")+
 geom_vline(xintercept = 0, colour = "black")+
-ylim(0,20)
+  ylim(-10,20)
 ```
 ]
 
@@ -109,6 +140,7 @@ The function to the left is $f(x) = 5x^3 +8x^2 +2x+4$ and its second derivative 
 
 It is convex when $x \in \left(-\frac{16}{30},\infty\right)$ and concave when $x \in \left(-\infty,-\frac{16}{30}\right)$. $x =-\frac{16}{30}$ is an *inflection point*.
 ]
+
 
 ---
 
@@ -445,14 +477,14 @@ This is read as the ''integral of $f(x)$ from $x=a$ to $x=b$ with respect to $x$
 
 --
 
-Using this approach, we can find:
+Theoretically, this approach allows to find:
 
   - the exact value of the area between those points for any well-behaved   function
   - a general equation for the area between any two points 
   
 --
 
-However, it is mathematically difficult to solve these using this approach.
+However, it is mathematically complicated to solve these using this approach
 ---
 
 
@@ -471,7 +503,7 @@ Essentially, this “unwinds” the derivative operation, or applies it backward
 ---
 ## The Fundamental Theorem of Calculus
 
-The fundamental theorem of calculus relates the derivative and the integral.
+The fundamental theorem of calculus relates the antiderivative and the integral.
 
 \begin{align}
 \int_a^bf(x)dx = F(b)-F(a) =  F(x)\displaystyle\rvert_a^b
