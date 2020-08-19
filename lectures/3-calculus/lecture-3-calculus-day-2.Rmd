@@ -41,7 +41,7 @@ These are known as second derivatives, denoted $\frac{d^2[f(x)]}{dx^2}$ or $f''(
 
 --
 
-Consider $f(x) = 5x^3 +8x^2 +2x+4$. What is its first and second derivatives?
+Consider $f(x) = 5x^3 +8x^2 +2x+4$. What are its first and second derivatives?
 
 --
 
@@ -58,7 +58,7 @@ f''(x) = 30x + 16
 
 --
 
-Higher order (third, fourth, etc) derivatives also exist, but are rarely relevant.
+Higher order (third, fourth, etc.) derivatives also exist, but are rarely relevant.
 
 ---
 
@@ -176,7 +176,7 @@ Consider $f(x, y) = 3x^3y^2$. Let's say we want to find $\frac{\partial^2}{\part
 
 Pay attention to the denominator to learn what operations to perform, and in what order. Here, we are taking the second derivative of the entire function, but are differentiating once with respect to $x$ and then once with respect to $y$.
 
-If instead we were given $\frac{\partial^3}{\partial x^2 \partial y}$ we would differentiate 3 times overall, once with respect to y, and then twice with respect to x.
+If instead we were given $\frac{\partial^3}{\partial x^2 \partial y}$, we would differentiate 3 times overall, once with respect to y, and then twice with respect to x.
 
 ---
 
@@ -341,7 +341,7 @@ geom_segment(x = 0.25, xend = 0.75, y = .25 -(.25)^2, yend = .75 -(.75)^2, colou
 ]
 
 .pull-right[
-Let's consider even more complicated function, $y = x-x^2$, plotted to the left.  What is its area under the curve from $x=0.25$ and $x=0.75$?
+Let's consider an even more complicated function, $y = x-x^2$, plotted to the left.  What is its area under the curve from $x=0.25$ and $x=0.75$?
 
 This would require a more complex trick.
 ]
@@ -484,7 +484,7 @@ We've been discussing *definite* integrals or ones that are bounded.
 
 --
 
-You can also have *indefinite* integrals or ones that do not have specific bounds, or 
+We can also have *indefinite* integrals or ones that do not have specific bounds, or 
 
 
 \begin{align}
@@ -783,7 +783,7 @@ However, it may be necessary to check by taking the second derivative and evalua
 
   - Negative $(f''(x^*) < 0)$: local maximum 
   - Positive $(f''(x^*) > 0)$: local minimum 
-  - Zero $(f''(x^*) = 0)$: saddle point, or neither a minimum or a maximum
+  - Zero $(f''(x^*) = 0)$: neither a minimum or a maximum
 
 --
 
