@@ -24,11 +24,11 @@ source(here("R/setup-lectures.R"))
 
 1) Second Derivatives
 
-2) Partial Derivatives
+2) Optimization
 
-3) Integrals
+3) Partial Derivatives
 
-4) Optimization
+4) Integrals
 
 ---
 ## Second Derivatives
@@ -154,6 +154,193 @@ $f(x) = 16x^3 −3x^2 +6$
 $g(x) = x-x^2$
 
 $h(x) = 4x^{-1} + 5x^{\frac{7}{2}}$
+
+---
+
+## Optimization (Maximization or Minimization)
+
+In social science and in statistics, we often want to find the maximum or minimum of a function. For example:
+
+--
+
+-  We have specified a function that shows the utility a president gets out of some policy in terms of their chances of reelection. Policy is the input, probability of reelection is the output. 
+  + We want to see when this function is maximized, or in other words, what values of policy would give the maximum chance of reelection.
+  
+-  Or we have a function that determines the bias in our statistical estimates of said probability of reelection. Model parameters are inputs, bias (how much the estimate deviates from the truth) is the output. 
+  + We want to minimize this function, that is, find model parameters under which the bias is smallest.
+
+--
+
+How do we do this? Derivatives can help!
+
+---
+
+## Optimization: An Example
+
+.pull-left[
+```{r, echo=FALSE, cache = TRUE}
+df <- data.frame(x = seq(0,10, by= 1))
+
+ggplot(df, aes(x)) + 
+stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
+xlab("x") + ylab("f(x)") +
+geom_hline(yintercept = 0, colour = "black")+
+geom_vline(xintercept = 0, colour = "black")
+```
+]
+
+.pull-right[
+
+Suppose we want to find all the maxima and minima for the function $f(x) = 2x^3 - 33x^2 + 168x$ when $x \in [0,10]$.
+
+]
+---
+
+## Optimization: An Example
+
+.pull-left[
+```{r, echo=FALSE, cache = TRUE}
+df <- data.frame(x = seq(0,10, by= 1))
+
+ggplot(df, aes(x)) + 
+stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
+xlab("x") + ylab("f(x)") +
+geom_hline(yintercept = 0, colour = "black")+
+geom_vline(xintercept = 0, colour = "black")+
+geom_point(x = 0, y= 0)+
+geom_point(x = 10, y= 2*10^3-33*10^2+168*10)
+```
+]
+
+.pull-right[
+
+Suppose we want to find all the maxima and minima for the function $f(x) = 2x^3 - 33x^2 + 168x$ when $x \in [0,10]$.
+
+The *absolute maximum* occurs at $x = 10$, and the *absolute minimum* occurs at $x = 0$, or the endpoints. But there also appear to be a local maximum and a local minimum in between them.
+
+]
+
+---
+
+## Optimization: An Example
+
+.pull-left[
+```{r, echo=FALSE, cache = TRUE}
+df <- data.frame(x = seq(0,10, by= 1))
+
+ggplot(df, aes(x)) + 
+stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
+xlab("x") + ylab("f(x)") +
+geom_hline(yintercept = 0, colour = "black")+
+geom_vline(xintercept = 0, colour = "black") +
+geom_point(x = 0, y= 0)+
+geom_point(x = 4, y= 2*4^3-33*4^2+168*4) +
+geom_point(x = 7, y= 2*7^3-33*7^2+168*7)+
+geom_point(x = 10, y= 2*10^3-33*10^2+168*10)+
+geom_segment(x = 3, xend = 5, y =  2*4^3-33*4^2+168*4, yend= 2*4^3-33*4^2+168*4, linetype = "dotdash" ) +
+geom_segment(x = 6, xend = 8, y =  2*7^3-33*7^2+168*7, yend= 2*7^3-33*7^2+168*7, linetype = "dotdash" )
+```
+]
+
+.pull-right[
+
+Suppose we want to find all the maxima and minima for the function $f(x) = 2x^3 - 33x^2 + 168x$ when $x \in [0,10]$.
+
+The *absolute maximum* occurs at $x = 10$, and the *absolute minimum* occurs at $x = 0$, or the endpoints. But there also appear to be a local maximum and a local minimum in between them.
+
+To determine the precise location of these local maxima and minima, note that at these points, the slope of the line is flat. This means the derivative, which captures the slope of the tangent line, is $0$.
+
+]
+
+---
+## Optimization: An Example
+
+Armed with this insight,  we need to find $f'(x)$ and set it equal to $0$:
+
+--
+
+\begin{align}
+0 = f'(x) = (2x^3 - 33x^2 + 168x)' =  6x^2 −66x+168
+\end{align}
+
+--
+
+We can simply solve this equation:
+
+--
+
+\begin{align}
+0 &= 6x^2 - 66x+168 \\
+0 &= x^2 - 11x + 28
+\end{align}
+
+--
+
+We can solve it either by *factoring*
+
+$0 = (x^2 - 4x) + (-7x + 28) = x(x - 4) - 7(x - 4) = (x - 4) (x - 7)$
+
+...or by using the *quadratic formula*
+
+
+$x = \frac{11 \pm \sqrt{(-11)^2-4(1)(28)}}{2(1)} = \frac{11 \pm 3}{2}$
+
+Either way, $x = 4$ or $x = 7$
+
+---
+class: center, middle
+```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
+df <- data.frame(x = seq(0,10, by= 1))
+
+ggplot(df, aes(x)) + 
+stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
+xlab("x") + ylab("f(x)") +
+geom_hline(yintercept = 0, colour = "black")+
+geom_vline(xintercept = 0, colour = "black") +
+geom_point(x = 0, y= 0)+
+geom_point(x = 4, y= 2*4^3-33*4^2+168*4) +
+geom_point(x = 7, y= 2*7^3-33*7^2+168*7)+
+geom_point(x = 10, y= 2*10^3-33*10^2+168*10)+
+geom_segment(x = 3, xend = 5, y =  2*4^3-33*4^2+168*4, yend= 2*4^3-33*4^2+168*4, linetype = "dotdash" ) +
+geom_segment(x = 6, xend = 8, y =  2*7^3-33*7^2+168*7, yend= 2*7^3-33*7^2+168*7, linetype = "dotdash" )+
+geom_segment(x = 4, xend=4, y =0, yend = 2*4^3-33*4^2+168*4, colour = "black", linetype = "dotdash")+
+geom_segment(x = 7, xend=7, y =0, yend = 2*7^3-33*7^2+168*7, colour = "black", linetype = "dotdash")+
+scale_x_continuous(breaks=seq(0,10,1))
+```
+---
+## Optimization: Some Rules
+
+If the function is relatively simple to understand or graph, it may be possible to know whether you’re dealing with a maximum or a minimum.
+
+--
+
+However, it may be necessary to check by taking the second derivative and evaluating it at the point where the first derivative equals $0$, which we'll call $x^*$:
+
+--
+
+  - Negative $(f''(x^*) < 0)$: local maximum 
+  - Positive $(f''(x^*) > 0)$: local minimum 
+  - Zero $(f''(x^*) = 0)$: neither a minimum or a maximum
+
+--
+
+Returning to our previous example, 
+
+\begin{align}
+f'(x) &= 6x^2 - 66x+168 \\
+f''(x) &= 12x-66
+\end{align}
+
+--
+
+when we evaluate the second derivatives at the local minimum and maximum, the results are $f''(4) = -18$ and $f''(7) = 18$. 
+
+---
+## An Exercise
+
+Find the local minimum and local maximum of the function below, and check mathematically which is the minimum and which is the maximum:
+
+$x^3−x^2+1$
 
 ---
 
@@ -651,191 +838,6 @@ There are techniques for computing the integrals of more complicated functions:
   
 These are beyond the scope of what we have time to cover here and, for the most part, beyond the scope of what you will need to do by hand in political science.
 
----
-
-## Optimization (Maximization or Minimization)
-
-In social science and in statistics, we often want to find the maximum or minimum of a function. For example:
-
---
-
--  We have specified a function that shows the utility a president gets out of some policy in terms of their chances of reelection. Policy is the input, probability of reelection is the output. 
-  + We want to see when this function is maximized, or in other words, what values of policy would give the maximum chance of reelection.
--  Or we have a function that determines the bias in our statistical estimates of said probability of reelection. Model parameters are inputs, bias (how much the estimate deviates from the truth) is the output. 
-  + We want to minimize this function, that is, find model parameters under which the bias is smallest.
-
---
-
-How do we do this? Derivatives can help!
-
----
-
-## Optimization: An Example
-
-.pull-left[
-```{r, echo=FALSE, cache = TRUE}
-df <- data.frame(x = seq(0,10, by= 1))
-
-ggplot(df, aes(x)) + 
-stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
-xlab("x") + ylab("f(x)") +
-geom_hline(yintercept = 0, colour = "black")+
-geom_vline(xintercept = 0, colour = "black")
-```
-]
-
-.pull-right[
-
-Suppose we want to find all the maxima and minima for the function $f(x) = 2x^3 - 33x^2 + 168x$ when $x \in [0,10]$.
-
-]
----
-
-## Optimization: An Example
-
-.pull-left[
-```{r, echo=FALSE, cache = TRUE}
-df <- data.frame(x = seq(0,10, by= 1))
-
-ggplot(df, aes(x)) + 
-stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
-xlab("x") + ylab("f(x)") +
-geom_hline(yintercept = 0, colour = "black")+
-geom_vline(xintercept = 0, colour = "black")+
-geom_point(x = 0, y= 0)+
-geom_point(x = 10, y= 2*10^3-33*10^2+168*10)
-```
-]
-
-.pull-right[
-
-Suppose we want to find all the maxima and minima for the function $f(x) = 2x^3 - 33x^2 + 168x$ when $x \in [0,10]$.
-
-The *absolute maximum* occurs at $x = 10$, and the *absolute minimum* occurs at $x = 0$, or the endpoints. But there also appear to be a local maximum and a local minimum in between them.
-
-]
-
----
-
-## Optimization: An Example
-
-.pull-left[
-```{r, echo=FALSE, cache = TRUE}
-df <- data.frame(x = seq(0,10, by= 1))
-
-ggplot(df, aes(x)) + 
-stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
-xlab("x") + ylab("f(x)") +
-geom_hline(yintercept = 0, colour = "black")+
-geom_vline(xintercept = 0, colour = "black") +
-geom_point(x = 0, y= 0)+
-geom_point(x = 4, y= 2*4^3-33*4^2+168*4) +
-geom_point(x = 7, y= 2*7^3-33*7^2+168*7)+
-geom_point(x = 10, y= 2*10^3-33*10^2+168*10)+
-geom_segment(x = 3, xend = 5, y =  2*4^3-33*4^2+168*4, yend= 2*4^3-33*4^2+168*4, linetype = "dotdash" ) +
-geom_segment(x = 6, xend = 8, y =  2*7^3-33*7^2+168*7, yend= 2*7^3-33*7^2+168*7, linetype = "dotdash" )
-```
-]
-
-.pull-right[
-
-Suppose we want to find all the maxima and minima for the function $f(x) = 2x^3 - 33x^2 + 168x$ when $x \in [0,10]$.
-
-The *absolute maximum* occurs at $x = 10$, and the *absolute minimum* occurs at $x = 0$, or the endpoints. But there also appear to be a local maximum and a local minimum in between them.
-
-To determine the precise location of these local maxima and minima, note that at these points, the slope of the line is flat. This means the derivative, which captures the slope of the tangent line, is $0$.
-
-]
-
----
-## Optimization: An Example
-
-Armed with this insight,  we need to find $f'(x)$ and set it equal to $0$:
-
---
-
-\begin{align}
-0 = f'(x) = (2x^3 - 33x^2 + 168x)' =  6x^2 −66x+168
-\end{align}
-
---
-
-We can simply solve this equation:
-
---
-
-\begin{align}
-0 &= 6x^2 - 66x+168 \\
-0 &= x^2 - 11x + 28
-\end{align}
-
---
-
-We can solve it either by *factoring*
-
-$0 = (x^2 - 4x) + (-7x + 28) = x(x - 4) - 7(x - 4) = (x - 4) (x - 7)$
-
-...or by using the *quadratic formula*
-
-
-$x = \frac{11 \pm \sqrt{(-11)^2-4(1)(28)}}{2(1)} = \frac{11 \pm 3}{2}$
-
-Either way, $x = 4$ or $x = 7$
-
----
-class: center, middle
-```{r, echo=FALSE, cache = TRUE, out.width = "80%"}
-df <- data.frame(x = seq(0,10, by= 1))
-
-ggplot(df, aes(x)) + 
-stat_function(fun = function(x) 2*x^3-33*x^2+168*x, colour = "red")+ theme_minimal()+
-xlab("x") + ylab("f(x)") +
-geom_hline(yintercept = 0, colour = "black")+
-geom_vline(xintercept = 0, colour = "black") +
-geom_point(x = 0, y= 0)+
-geom_point(x = 4, y= 2*4^3-33*4^2+168*4) +
-geom_point(x = 7, y= 2*7^3-33*7^2+168*7)+
-geom_point(x = 10, y= 2*10^3-33*10^2+168*10)+
-geom_segment(x = 3, xend = 5, y =  2*4^3-33*4^2+168*4, yend= 2*4^3-33*4^2+168*4, linetype = "dotdash" ) +
-geom_segment(x = 6, xend = 8, y =  2*7^3-33*7^2+168*7, yend= 2*7^3-33*7^2+168*7, linetype = "dotdash" )+
-geom_segment(x = 4, xend=4, y =0, yend = 2*4^3-33*4^2+168*4, colour = "black", linetype = "dotdash")+
-geom_segment(x = 7, xend=7, y =0, yend = 2*7^3-33*7^2+168*7, colour = "black", linetype = "dotdash")+
-scale_x_continuous(breaks=seq(0,10,1))
-```
----
-## Optimization: Some Rules
-
-If the function is relatively simple to understand or graph, it may be possible to know whether you’re dealing with a maximum or a minimum.
-
---
-
-However, it may be necessary to check by taking the second derivative and evaluating it at the point where the first derivative equals $0$, which we'll call $x^*$:
-
---
-
-  - Negative $(f''(x^*) < 0)$: local maximum 
-  - Positive $(f''(x^*) > 0)$: local minimum 
-  - Zero $(f''(x^*) = 0)$: neither a minimum or a maximum
-
---
-
-Returning to our previous example, 
-
-\begin{align}
-f'(x) &= 6x^2 - 66x+168 \\
-f''(x) &= 12x-66
-\end{align}
-
---
-
-when we evaluate the second derivatives at the local minimum and maximum, the results are $f''(4) = -18$ and $f''(7) = 18$. 
-
----
-## An Exercise
-
-Find the local minimum and local maximum of the function below, and check mathematically which is the minimum and which is the maximum:
-
-$x^3−x^2+1$
 
 ---
 
