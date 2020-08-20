@@ -28,6 +28,24 @@ source(here("R/setup-lectures.R"))
 
 ---
 
+## Agenda
+
+- Why do we need statistics?
+
+- Counting
+
+- Set theory
+
+- Probability
+
+- Independence, joint probability
+
+- Bayes' Theorem
+
+- Looking ahead
+
+---
+
 ## Why Statistics?
 
 Let's say we want to know under what conditions democracies fail. Lots of factors may lead to such outcomes, and we want to learn which of these factors are more important. How do we do that?
@@ -55,7 +73,7 @@ The mathematical study of data
 
 --
 
-- **Descriptive statistics:** describe the data (how often democracies fail, in what time periods they have failed more)
+- **Descriptive statistics:** describe the data (how often democracies fail, in what time periods they failed more)
 
 --
 
@@ -75,7 +93,7 @@ To make inferences about **data generating process**, we use probability
 
 - We have some data: regime failures, GDP statistics, conflict occurrence, etc. 
 
-- But we don't know which process they come from (e.g., do democracies fail because of poor economy or because of violent conflict?)
+- But we don't know which process regime failures come from (e.g., do democracies fail because of poor economy, or because of violent conflict, or both?)
 
 --
 
@@ -86,22 +104,6 @@ To make inferences about **data generating process**, we use probability
 - Probability also helps us evaluate the level of uncertainty around our findings
 
 
----
-
-## Agenda
-
-- Counting
-
-- Set theory
-
-- Probability
-
-- Independence, joint probability
-
-- Bayes' Theorem
-
-- Looking ahead
-
 
 
 ---
@@ -110,7 +112,7 @@ To make inferences about **data generating process**, we use probability
 
 A **random variable** is a realization of a process that is at least partially random (i.e. unpredictable)
 
-- e.g. coin flip, dice roll, the functioning of a political regime  
+- e.g. coin flip, dice roll, regime failure (or absence of failure)  
 - probability enters statistics through the assumptions we make about the nature of randomness in a random variable (e.g., whether certain kinds of outcomes are more likely than others)
 
 --
@@ -230,15 +232,11 @@ Also called **permutation**.
 
 The number of ways to select $k$ objects from a pool of $n$ possible objects, where order matters but replacement does not occur.
 
-Intuition: each draw *removes the object* from the larger pool. Subsequent draws have one less element to choose from.
-
---
-
 $$\begin{align}
   n * (n - 1) * (n - 2) * \ldots * (n - k - 1) = \frac{n!}{(n - k)!}
 \end{align}$$
 
---
+Intuition: each draw *removes the object* from the larger pool. Subsequent draws have one less element to choose from.
 
 For example: the number of possible ways to deal a card game, winning lottery numbers
 
@@ -252,7 +250,7 @@ For example: the number of possible ways to deal a card game, winning lottery nu
 
 Also called **combinations**: The number of possible ways to select $k$ objects from a pool of $n$ possible objects, where *order does not matter* and *replacement does not occur*
 
-Intuition: we have fewer possibilities than before, substantively identical elements ( $A$ and then $B$; $B$ and then $A$) are not double counted
+Intuition: we have fewer possibilities than before. Substantively identical elements ( $A$ and then $B$; $B$ and then $A$) are not double counted
 
 $$\begin{align}
   \frac{n!}{k!(n - k)!} &= {\binom{n}{k}}
@@ -377,16 +375,6 @@ What is $\Omega^{C}$?
 
 ---
 
-class: center, middle
-
-## Making sense?
-
-
-
-
-
----
-
 class: inverse, middle, center
 
 ## Probability
@@ -466,7 +454,7 @@ $$\sum\limits_{n = 1}^{N} p(A_{n}) = 1$$
 
 ## Probability of Complements
 
-If $\Omega$ contains the set of all potential outcomes, and $A$ is an event that is a subset of the outcome space that occurs with $p(A)$
+If $\Omega$ contains the set of all potential outcomes, and $A$ is an event that is a subset of the outcome space that occurs with $p(A)$...
 
 What is $p(A^{C})$?
 
@@ -638,10 +626,8 @@ $$p(A \mid B) = \frac{p(A \cap B)}{p(B)}$$
 The intuition:
 
 - If we *know* that $B$ happened, we only care about the space within $B$
---
 
 - the probability that both $A$ and $B$ happen, divided by the probability of $B$
---
 
 - $p(\mathrm{intersection}) \; / \; p(\text{conditioning event})$
 
@@ -807,10 +793,6 @@ What we're doing here is considering the probability of *multiple events*
 
 $p(A, B) \equiv p(A) \cap p(B)$
 
---
-
-The exact equation for the joint probability depends on whether the events are *independent*
-
 
 
 
@@ -879,6 +861,14 @@ Because these are mutually exclusive and exhaustive events, probabilities sum to
 
 ---
 
+## Exercises
+
+In a given district, 35% support party $A$, 50% support party $B$, and 15% support party $C$. The turnout in the previous local election was 20%, and supporters of all parties were equally likely to vote. What is the probability that a randomly chosen adult in the district supports party C and has voted in the last election?
+
+In a sample of countries, 45% are democratic and 55% are authoritarian. 10% of the countries, regardless of their political regime, have experienced an oil windfall in the last 20 years. How likely is that a randomly selected country is a democracy and has experienced an oil windfall?
+
+---
+
 Imagine we flip a coin. If heads, we draw a ball from the left urn. If tails, we draw from the right.
 
 <center>
@@ -908,14 +898,6 @@ $$\begin{align}
 
 ---
 
-## Exercises
-
-In a given district, 35% support party $A$, 50% support party $B$, and 15% support party $C$. The turnout in the previous local election was 20%, and supporters of all parties were equally likely to vote. What is the probability that a randomly chosen adult in the district supports party C and has voted in the last election?
-
-In a sample of countries, 45% are democratic and 55% are authoritarian. 10% of the countries, regardless of their political regime, have experienced an oil windfall in the last 20 years. How likely is that a randomly selected country is a democracy and has experienced an oil windfall?
-
----
-
 ## Inverse Conditional Probability
 
 <center>
@@ -923,10 +905,6 @@ In a sample of countries, 45% are democratic and 55% are authoritarian. 10% of t
 </center>
 
 Someone flips a coin to decide whether to draw a ball from bowl $A$ or $B$ (each with 50% probability), but the bowl is hidden from us.
-
---
-
-- What is the probability of drawing from bowl $A$?
 
 --
 
@@ -979,8 +957,7 @@ So what do we need for $p(A \mid \mathrm{blue})$?
 $p(A \cap \mathrm{blue})$?
 --
 
-- $(0.5)(0.9) = 0.45$
-- This is (associatively) the same as $p(\mathrm{blue} \mid A)p(A)$
+- $(0.5)(0.9) = 0.45$, or $p(\mathrm{blue} \mid A)p(A)$
 
 --
 
@@ -1019,7 +996,7 @@ p(x \mid y) = \frac{p(y \mid x)p(x)}{p(y)}
 ## Bayes' Theorem
 
 
-Bayes' Theorem describes how to solve equation by beginning with its inverse
+Bayes' Theorem describes how to solve the equation by beginning with its inverse
 
 $$\begin{align}
   p(x \mid y) = \frac{p(y \mid x)p(x)}{p(y)}
@@ -1037,14 +1014,14 @@ Bayes' Theorem has many applications:
 - machine learning and prediction; e.g., [how likely is a candidate to win an election](https://blogs.cornell.edu/info2040/2015/11/15/bayes-rule-in-the-presidential-election/)
 - formal modeling (how actors derive their optimal responses)
 
-It is also the basis for Bayesian inference and Bayesian statistics
+It is the basis for Bayesian inference and Bayesian statistics
 
 
 ---
 
 ## Bayesian Inference
 
-Instead of just numbers (balls in an urn), Bayesian statistics work with distributions
+Instead of just numbers (as in previous examples), Bayesian statistics work with distributions
 
 - We have _prior beliefs_, say, about the probability of a "heads" on a coin, and these beliefs are uncertain
 - Flip the coin several times, calculate the likelihood of _evidence_ given the prior
@@ -1070,7 +1047,7 @@ $$\text{Posterior} = \frac{p(\mathrm{evidence} \mid \mathrm{prior}) \times \math
 - Over a large number of repeated trials, probability is the fraction of trials in which an event occurs
 - Statistical properties come from **repeated sampling assumptions**
 - There exists a **fixed** true parameter, which we estimate
-- We can calculate probability that our data were created by different assumed parameter values
+- We can calculate the probability that our data were created by different assumed parameter values
 - Low probability of data can be used to reject parameter values
 - Focus is on the probability of the **data**, assuming a fixed parameter
 ]
@@ -1082,12 +1059,11 @@ $$\text{Posterior} = \frac{p(\mathrm{evidence} \mid \mathrm{prior}) \times \math
 .pull-left[
 "Bayesianism"
 
-- Probability is our belief about how likely an event is, given our most reasonable information and evidence
-- Statistical properties come from **posterior distribution**
+- Probability is our belief about how likely an event is, given our most reasonable information
+- Statistical properties come from the **posterior distribution**
 - Parameters are "random" (not fixed), only approximated with a distribution, given the model and data
 - We have prior notions about plausible parameter values
-- We can estimate the likelihood of data at different prior values
-- Data updates our prior to form posterior beliefs
+- We update our prior based on the likelihood of data at different prior values to form posterior beliefs
 - Focus is on the probability of the **parameter**, updating a prior with data
 ]
 
@@ -1133,7 +1109,7 @@ First field: "I want to study *how to study* politics" (develop new statistical 
 
 Second field: "I want to teach and research about/use advanced methods." Most grad students in the department who take advanced methods training take this path
 
-Minor: 3 courses. Depends on your dissertation focus. See reqs, talk to your advisors and to Deb
+Minor: 3 courses. Depends on your dissertation focus. See reqs, talk to your advisors
 
 
 ---
