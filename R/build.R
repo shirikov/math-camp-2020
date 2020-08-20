@@ -20,5 +20,7 @@ chrome_print("lectures/3-calculus/lecture-3-calculus-day-1.rmd",
              timeout = 150)
 chrome_print("lectures/3-calculus/lecture-3-calculus-day-2.rmd",
              timeout = 150)
+chrome_print("lectures/3-calculus/lecture-3-calculus-day-2-exercises.rmd",
+             timeout = 150)
 chrome_print("lectures/4-probability/lecture-4-probability.rmd", 
              timeout = 150)
