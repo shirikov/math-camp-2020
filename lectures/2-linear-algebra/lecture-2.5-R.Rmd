@@ -72,6 +72,7 @@ source(here("R/setup-lectures.R"))
 # Set Working Directory
 
 - Copy folder path
+- When you use the `here` package, you won't have to worry about this step but for the sake of this demo, showing you this manually could help
 
 --
   
